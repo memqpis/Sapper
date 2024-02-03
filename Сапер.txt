@@ -1,0 +1,82 @@
+// Создаем игровое поле
+var field = [];
+var size = 5; // Размер поля
+var totalMines = 5; // Количество мин
+
+// Создаем пустое поле
+for (var i = 0; i < size; i++) {
+  field[i] = [];
+  for (var j = 0; j < size; j++) {
+    field[i][j] = {
+      isMine: false,
+      isOpen: false
+    };
+  }
+}
+
+// Размещаем мины на поле
+for (var k = 0; k < totalMines; k++) {
+  var randomRow = Math.floor(Math.random() * size);
+  var randomCol = Math.floor(Math.random() * size);
+  field[randomRow][randomCol].isMine = true;
+}
+
+// Функция открытия клетки
+function openCell(row, col) {
+  if (row < 0 || row >= size || col < 0 || col >= size) {
+    // Проверяем находятся ли координаты в пределах поля
+    return;
+  }
+
+  var cell = field[row][col];
+
+  if (cell.isOpen) {
+    // Если клетка уже открыта, выходим из функции
+    return;
+  }
+
+  cell.isOpen = true;
+
+  if (cell.isMine) {
+    // Если открыта клетка с миной, выводим сообщение о проигрыше
+    console.log("Вы проиграли! Есть мина!");
+    return;
+  }
+
+  // Проверяем количество мин в соседних клетках
+  var mineCount = 0;
+
+  // Проверяем клетку сверху
+  if (row - 1 >= 0 && field[row - 1][col].isMine) {
+    mineCount++;
+  }
+
+  // Проверяем клетку снизу
+  if (row + 1 < size && field[row + 1][col].isMine) {
+    mineCount++;
+  }
+
+  // Проверяем клетку слева
+  if (col - 1 >= 0 && field[row][col - 1].isMine) {
+    mineCount++;
+  }
+
+  // Проверяем клетку справа
+  if (col + 1 < size && field[row][col + 1].isMine) {
+    mineCount++;
+  }
+
+  // Открываем соседние пустые клетки, если количество мин равно 0
+  if (mineCount === 0) {
+    openCell(row - 1, col);
+    openCell(row + 1, col);
+    openCell(row, col - 1);
+    openCell(row, col + 1);
+  }
+
+  // Выводим информацию о количестве мин в соседних клетках
+  console.log("Количество мин в соседних клетках: " + mineCount);
+}
+
+// Пример использования
+openCell(2, 2); // Открываем центральную клетку

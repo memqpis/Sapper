@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пример</title>
+</head>
+<body>
+
+  
+
+<script>
+// Создаем двумерный массив
+let matrix = [];
+for (let i = 0; i < 5; i++) {
+  matrix[i] = [];
+}
+
+// Заполняем массив числами по порядку
+let num = 1;
+for (let i = 0; i < 5; i++) {
+  for (let j = 0; j < 5; j++) {
+    matrix[i][j] = num;
+    num++;
+  }
+}
+
+// Создаем поле из дивов и заполняем их числами из двумерного массива
+let container = document.getElementById('container'); // заменить 'container' на id вашего контейнера
+for (let i = 0; i < 5; i++) {
+  for (let j = 0; j < 5; j++) {
+    let div = document.createElement('div');
+    div.innerText = matrix[i][j];
+    container.appendChild(div);
+  }
+}
+
+  
+</script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<div id="playZone" class="playZone">
+    <div class="row">
+        <div class="zone"></div>
+        <div class="zone"></div>
+        <div class="zone"></div>
+        <div class="zone"></div>
+        <div class="zone"></div>
+    </div>
+
+    <div class="row">
+        <div class="zone"></div>
+        <div class="zone"></div>
+        <div class="zone"></div>
+        <div class="zone"></div>
+        <div class="zone"></div>
+    </div>
