@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
 
 *{
-    background: gainsboro;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,15 +9,12 @@
 
 }
 
-
-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100hv;
+body, html {
+    height: 100%;
+    margin: 0;
+    display: grid;
+    place-items: center;
 }
-
-
 
 .title{
     display: flex;
@@ -46,47 +42,50 @@ body{
     left: 50%;
     top: 39%;
     transform: translate(-50%, -50%);
-    border: 0.4vh solid rgb(39, 39, 39);
+    border: 0.5vh solid rgb(39, 39, 39);
     border-radius: 4vh;
     cursor: pointer;
     font-size: 8vh;
-    
+    transition: 0.1s;  
 }
 
 .playBtn h4{
+    transition: 0.1s;
     background: rgb(113, 255, 113);
-    transition: 0.23s ;
+
+}
+
+.playBtn:hover h4{
+    background: rgb(138, 255, 138);
 }
 
 .playBtn:hover{
     font-size: 8.4vh;
-   
+    background: rgb(138, 255, 138);
 }
 
 .playZone{
-display: none;
-flex-direction: column;
-background: transparent;
-align-items: center;
-justify-content: center;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
+    display: none;
+    flex-direction: column;
+    background: transparent;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .row{
     display: flex;
-    
-    
-
 }
 
+
+
 .zone{
-    background: rgb(206, 206, 206);
     margin-inline: 0px;
     margin-bottom: 0px;
-    background: transparent;
+    background: gainsboro;
     width: 3vh;
     height: 3vh;
     border: 0.1vh solid black;
@@ -101,7 +100,7 @@ transform: translate(-50%, -50%);
     position: absolute;
     top: 50%;
     border-radius: 1.5vh;
-    border: 0.3vh solid rgb(39, 39, 39);
+    border: 0.4vh solid rgb(39, 39, 39);
     background-color: transparent;
     backdrop-filter: blur(4px);
     width: 20vh;
@@ -164,7 +163,7 @@ html{
 }
 
 .bomb{
-    background-color: red;
+    background-color: #ff371d;
     border-radius: 0.6vh;
 }
 
@@ -180,4 +179,295 @@ html{
 .appearance{
     animation: appearance 0.5s;
     opacity: 1;
+}
+
+.repeatGameBtn{
+    display: none;
+    width: 7.5vh;
+    height: 7.5vh;
+    background: gainsboro;
+    border-radius: 1vh;
+    position: absolute;
+    top: 12.8%;
+    left: 5%;
+    background-size: cover;
+    border: 0.4vh solid rgb(29, 29, 29);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.repeatGameBtn:hover{
+background-color:rgb(255, 255, 255);
+
+}
+
+.repeatGameBtn:active{
+    background: rgb(175, 175, 175);
+    transition: 0.1s;
+        .repeatImg{
+            height: 5.5vh;
+            width: 5.5vh;
+            top: 11%;
+            left: 7.5%;
+            background-color: transparent;
+            position: absolute;
+            transition: 0.05s;
+        }
+}
+
+.repeatImg{
+    height: 5.7vh;
+    width: 5.7vh;
+    top: 10%;
+    left: 6%;
+    background-color: transparent;
+    position: absolute;
+    transition: 0.005s;
+}
+
+.exitGameBtn{
+    display: none;
+    width: 7.5vh;
+    height: 7.5vh;
+    background: gainsboro;
+    border-radius: 1vh;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    background-size: cover;
+    border: 0.4vh solid rgb(29, 29, 29);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.exitGameBtn:hover{
+    background-color:rgb(255, 255, 255);
+
+}
+
+.exitGameBtn:active{
+    background: rgb(175, 175, 175);
+    transition: 0.1s;
+        .logOutImg{
+            height: 5.5vh;
+            width: 5.5vh;
+            top: 13%;
+            left: 13%;
+            background-color: transparent;
+            position: absolute;
+            transition: 0.05s;
+        }
+}
+
+.logOutImg{
+    height: 5.7vh;
+    width: 5.7vh;
+    top: 11%;
+    left: 11%;
+    background-color: transparent;
+    position: absolute;
+    transition: 0.005s;
+}
+
+
+
+.exitGameWindow{
+    margin: 0;
+    width: 70vh;
+    height: 30vh;
+    background-color: rgb(142, 232, 255);
+    position: absolute;
+    border: 0.7vh solid black;
+    border-radius: 10vh;
+    display: none;
+    justify-items: center;
+    align-items: center;
+    padding: 0;
+}
+
+.exitGameWindowText{
+    position: absolute;
+    background-color: transparent;
+    top: 15%;
+    left: 9.5%;
+    font-size: 5.6vh;
+}
+
+.exitGameOk{
+    background-color: #8fff78;
+    top: 49%;
+    left: 17%;
+    height: 10vh;
+    width: 20vh;
+    position: absolute;
+    border-radius: 4vh;
+    font-size: 4.5vh;
+    border: 0.4svh solid black;
+    cursor: pointer;
+    transition: 0.1s;
+
+}
+
+.exitGameCansel{
+    background-color: #ff7575;
+    top: 49%;
+    left: 54%;
+    height: 10vh;
+    width: 20vh;
+    position: absolute;
+    border-radius: 4vh;
+    font-size: 4vh;
+    border: 0.4vh solid black;
+    cursor: pointer;
+    transition: 0.1s;
+
+}
+
+.exitGameCansel:hover{
+    background-color: #ff715e;
+}
+
+.exitGameOk:hover{
+    background-color: #7cfc62;
+}
+
+.exitGameCansel:active{
+    background-color: #ff998b;
+}
+
+.exitGameOk:active{
+    background-color: #a8ff96;
+}
+
+.repeatGameWindow{
+    margin: 0;
+    width: 70vh;
+    height: 30vh;
+    background-color: rgb(142, 232, 255);
+    position: absolute;
+    border: 0.7vh solid black;
+    border-radius: 10vh;
+    display: none;
+    justify-items: center;
+    align-items: center;
+    padding: 0;
+}
+
+.repeatGameWindowText{
+    position: absolute;
+    background-color: transparent;
+    top: 15%;
+    left: 7%;
+    font-size: 5.2vh;
+}
+
+.repeatGameOk{
+    background-color: #8fff78;
+    top: 48%;
+    left: 18%;
+    height: 10vh;
+    width: 20vh;
+    position: absolute;
+    border-radius: 4vh;
+    font-size: 4.5vh;
+    border: 0.4svh solid black;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.repeatGameCansel{
+    background-color: #ff7575;
+    top: 48%;
+    left: 52%;
+    height: 10vh;
+    width: 20vh;
+    position: absolute;
+    border-radius: 4vh;
+    font-size: 4vh;
+    border: 0.4vh solid black;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.repeatGameCansel:hover{
+    background-color: #ff715e;
+}
+
+.repeatGameOk:hover{
+    background-color: #7cfc62;
+}
+
+.repeatGameCansel:active{
+    background-color: #ff998b;
+}
+
+.repeatGameOk:active{
+    background-color: #a8ff96;
+}
+
+.volumeBtn{
+    display: block;
+    width: 7.5vh;
+    height: 7.5vh;
+    background: gainsboro;
+    border-radius: 1vh;
+    position: absolute;
+    top: 5%;
+    left: 90%;
+    background-size: cover;
+    border: 0.4vh solid rgb(29, 29, 29);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.volumeBtn:hover{
+    background-color:rgb(255, 255, 255);
+    
+    }
+    
+    .volumeBtn:active{
+        background: rgb(175, 175, 175);
+        transition: 0.1s;
+            .volumeMuteImg{
+                height: 5.5vh;
+                width: 5.5vh;
+                top: 11%;
+                left: 7.5%;
+                background-color: transparent;
+                position: absolute;
+                transition: 0.05s;
+            }
+            .volumeUpImg{
+                height: 5.5vh;
+                width: 5.5vh;
+                top: 11%;
+                left: 7.5%;
+                background-color: transparent;
+                position: absolute;
+                transition: 0.05s;
+            }
+    }
+
+
+
+.volumeMuteImg{
+    height: 5.7vh;
+    width: 5.7vh;
+    top: 10%;
+    left: 6%;
+    background-color: transparent;
+    position: absolute;
+    transition: 0.005s;
+    display: block;
+}
+
+.volumeUpImg{
+    height: 5.7vh;
+    width: 5.7vh;
+    top: 10%;
+    left: 6%;
+    background-color: transparent;
+    position: absolute;
+    transition: 0.005s;
+    display: none;
 }

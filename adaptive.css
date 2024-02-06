@@ -1,0 +1,43 @@
+@media (min-width: 1200px){
+
+}
+
+@media (min-width: 992px){
+    
+}
+
+@media (min-width: 768px){
+    
+}
+
+@media (min-width: 480px){
+    .title {
+        font-size: 11vh;
+    }
+
+    .exitGameWindow {
+        margin: 0;
+        width: 70vh;
+        height: 30vh 
+    }
+}
+
+@media (min-width: 320px){
+    .title {
+        font-size: 8.5vh;
+    }
+
+    .exitGameBtn {
+        width: 7.5vh;
+        height: 7.5vh;
+        background: gainsboro;
+        border-radius: 1vh;
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        background-size: cover;
+        border: 0.4vh solid rgb(29, 29, 29);
+        cursor: pointer;
+        transition: 0.3s;
+    }
+}

@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cапер</title>
+    <title>Sapper</title>
     <link rel="icon" href="images/explosion.png">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="adaptive.css">
     <script src="app.js" defer></script>
 </head>
 <body>
@@ -39,6 +40,35 @@
  <div id="title" class="title">
     SAPPER
    </div>
+
+   
+    <button class="exitGameBtn" id="exitGameBtn_id">
+        <img src="images/logout.png" alt="logout" class="logOutImg">
+    </button>
+
+    <button class="repeatGameBtn" id="repeatGameBtn_id">
+        <img src="images/repeat.png" alt="repeat" class="repeatImg">
+    </button>
+
+    <button class="volumeBtn" id="volumeBtn"> 
+        <img src="images/volume-up.png" alt="volume-up" class="volumeUpImg" id="volumeUpImg">
+        <img src="images/volume-mute.png" alt="volumeMute" class="volumeMuteImg" id="volumeMuteImg">
+    </button>
+
+    <audio id="backgroundMusic" src="music/BackgraundMusic.mp3"></audio>
+   
+   <div class="exitGameWindow" id="exitGameWindow">
+        <h1 class="exitGameWindowText">Leave the game?</h1>
+        <button class="exitGameOk" id="exitGameOk">OK</button>
+        <button class="exitGameCansel" id="exitGameCansel">CANSEL</button>
     </div>
+
+    <div class="repeatGameWindow" id="repeatGameWindow">
+        <h1 class="repeatGameWindowText">Restart the game?</h1>
+        <button class="repeatGameOk" id="repeatGameOk">OK</button>
+        <button class="repeatGameCansel" id="repeatGameCansel">CANSEL</button>
+    </div>
+    </div>
+
 </body>
 </html>
