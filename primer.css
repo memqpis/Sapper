@@ -1,0 +1,21 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 98vh;
+    
+}
+
+.item1{
+margin: 10px;
+}
+
+.item2{
+
+}
+
+.item{
+    border: 1px solid black;
+    font-size: 50px;
+    padding: 30px;
+}

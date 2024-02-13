@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="adaptive.css">
     <script src="app.js" defer></script>
+    
 </head>
 <body>
     <div class="container">
@@ -40,20 +41,21 @@
  <div id="title" class="title">
     SAPPER
    </div>
-
    
-    <button class="exitGameBtn" id="exitGameBtn_id">
-        <img src="images/logout.png" alt="logout" class="logOutImg">
-    </button>
+<div class="titleGameOver" id="titleGameOver">
+    GAME OVER
+   </div>
 
-    <button class="repeatGameBtn" id="repeatGameBtn_id">
-        <img src="images/repeat.png" alt="repeat" class="repeatImg">
-    </button>
+  
 
-    <button class="volumeBtn" id="volumeBtn"> 
-        <img src="images/volume-up.png" alt="volume-up" class="volumeUpImg" id="volumeUpImg">
-        <img src="images/volume-mute.png" alt="volumeMute" class="volumeMuteImg" id="volumeMuteImg">
-    </button>
+
+        <button class="btn volumeBtn" id="volumeBtn"> 
+            <img src="images/volume-up.png" alt="volume-up" class="volumeUpImg" id="volumeUpImg">
+            <img src="images/volume-mute.png" alt="volumeMute" class="volumeMuteImg" id="volumeMuteImg">
+        </button>
+
+
+    
 
     <audio id="backgroundMusic" src="music/BackgraundMusic.mp3"></audio>
    
@@ -70,5 +72,15 @@
     </div>
     </div>
 
+    <div class="btnContainer" id="btnContainer">
+        <button class="btn exitGameBtn" id="exitGameBtn_id">
+            <img src="images/logout.png" alt="logout" class="logOutImg" id="logOutImg">
+        </button>
+
+        <button class="btn repeatGameBtn" id="repeatGameBtn_id">
+            <img src="images/repeat.png" alt="repeat" class="repeatImg" id="repeatImg">
+        </button>
+
+    </div> 
 </body>
 </html>
